@@ -57,10 +57,11 @@ function extract () {
 }
 
 alias bex='bundle exec'
-alias omz='vim ~/.oh-my-zsh/'
-alias myzsh='vim ~/.oh-my-zsh/custom/yale.zsh'
+alias omz='vim ~/Sites/castle/home/.oh-my-zsh/'
+alias myzsh='vim ~/Sites/castle/home/.oh-my-zsh/custom/yale.zsh'
+alias vimfiles='cd ~/Sites/vim-files/'
 alias nodeboilerplate='git clone git://github.com/robrighter/node-boilerplate.git'
 alias octave='exec /Applications/Octave.app/Contents/Resources/bin/octave'
 alias git='nocorrect git'
-alias aliases='vim ~/.oh-my-zsh/custom/yale.zsh'
+alias aliases='vim ~/Sites/castle/home/.oh-my-zsh/custom/yale.zsh'
 alias site5='ssh yalespec@yalespector.com'
