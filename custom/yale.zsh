@@ -69,12 +69,12 @@ function k {
 }
 
 alias bex='bundle exec'
-alias omz='vim ~/Sites/castle/home/.oh-my-zsh/'
-alias myzsh='vim ~/Sites/castle/home/.oh-my-zsh/custom/yale.zsh'
+alias omz='vim ~/.homesick/repos/yales-castle/home/.oh-my-zsh/'
 alias vimfiles='cd ~/Sites/vim-files/'
 alias nodeboilerplate='git clone git://github.com/robrighter/node-boilerplate.git'
 alias octave='exec /Applications/Octave.app/Contents/Resources/bin/octave'
 alias git='nocorrect git'
-alias aliases='vim ~/Sites/castle/home/.oh-my-zsh/custom/yale.zsh'
+alias aliases='vim ~/.homesick/repos/yales-castle/home/.oh-my-zsh/custom/yale.zsh'
 alias site5='ssh yalespec@yalespector.com'
 alias hspull='homesick pull yales-castle'
+alias castle='cd ~/.homesick/repos/yales-castle/'
