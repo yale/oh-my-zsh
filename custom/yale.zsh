@@ -54,6 +54,18 @@ function extract () {
     fi
 }
 
+# kill anything like a keyword
+function k {
+  if [ ! -z $* ] ; then
+    PRE='/\/bin\/'
+    POST='/{/grep/!p;}'
+    SEDARG=$PRE$*$POST
+    ps aux | sed -n $SEDARG | awk '{print$2}' | xargs kill -9
+  else
+    echo "I'm afraid I can't do that without a process name to match, Dave"
+  fi
+}
+
 alias bex='bundle exec'
 alias omz='vim ~/.homesick/repos/yales-castle/home/.oh-my-zsh/'
 alias vimfiles='cd ~/Sites/vim-files/'
