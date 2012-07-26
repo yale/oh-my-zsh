@@ -1,6 +1,7 @@
 setopt PROMPT_SUBST
 
-PROMPT='%{$fg[blue]%}%n%{$reset_color%} on %{$fg[red]%}%M%{$reset_color%} in %{$fg[blue]%}%~%b%{$reset_color%}$(git_time_since_commit)$(check_git_prompt_info)
+PROMPT='
+%{$fg[blue]%}%n%{$reset_color%} on %{$fg[red]%}%M%{$reset_color%} in %{$fg[blue]%}%~%b%{$reset_color%}$(check_git_prompt_info)
 ➜  '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}"
@@ -25,9 +26,9 @@ ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%{$fg[cyan]%}"
 function check_git_prompt_info() {
     if git rev-parse --git-dir > /dev/null 2>&1; then
         if [[ -z $(git_prompt_info) ]]; then
-            echo "%{$fg[magenta]%}detached-head%{$reset_color%})"
+            echo "(%{$fg[magenta]%}detached-head%{$reset_color%})"
         else
-            echo "$(git_prompt_info)"
+            echo "($(git_prompt_info)"
         fi
     fi
 }
@@ -36,7 +37,7 @@ function check_git_prompt_info() {
 function rvm_gemset() {
     GEMSET=`rvm gemset list | grep '=>' | cut -b4-`
     if [[ -n $GEMSET ]]; then
-        echo "%{$fg[yellow]%}$GEMSET%{$reset_color%}|"
+        echo "(%{$fg[yellow]%}$GEMSET%{$reset_color%}|"
     fi 
 
 }

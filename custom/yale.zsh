@@ -3,7 +3,6 @@ alias code=$HOME/Sites
 # Project directories and servers
 function imd {
   cd ~/Sites/imedidata
-  rvm 1.8.7-p302@imedidata
   gst
 }
 
@@ -14,7 +13,6 @@ function imdserver {
 
 function authmedidata {
   cd ~/Sites/authmedidata
-  rvm 1.9.2@authmedidata
   rails server
 }
 
